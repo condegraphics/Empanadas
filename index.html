@@ -91,7 +91,6 @@
       <img src="img/hero-empanadas-el-progreso-buenos-aires.jpeg" width="1600" height="1000" fetchpriority="high" decoding="async" alt="">
     </div>
     <p class="hero-caption sr-only">Empanadas al horno de barro recién horneadas, servidas en tabla de madera por El Progreso.</p>
-    <div class="hero-shade" aria-hidden="true"></div>
 
     <div class="wrap hero-body">
       <div class="hero-copy">
@@ -325,16 +324,6 @@
 
 <script>
 (function(){
-  var hdr=document.getElementById('siteHeader'),hero=document.getElementById('inicio');
-  function onScroll(){
-    if(!hdr)return;
-    var limit=hero?hero.offsetHeight-96:80;
-    hdr.classList.toggle('is-stuck',window.scrollY>limit);
-  }
-  window.addEventListener('scroll',onScroll,{passive:true});
-  window.addEventListener('resize',onScroll);
-  onScroll();
-
   var b=document.getElementById('burger'),m=document.getElementById('menu');
   if(!b||!m)return;
   b.addEventListener('click',function(){
